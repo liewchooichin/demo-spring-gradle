@@ -3,7 +3,7 @@ package com.example.demo.aboutStrings;
 public class MoreStrings {
 
   // reverse the characters in a string
-  protected static void reverseIntoPalindrome() {
+  public static void reverseIntoPalindrome() {
     String palindrome = "Dot saw I was Tod";
     int len = palindrome.length();
     char[] tempCharArray = new char[len];
@@ -27,6 +27,22 @@ public class MoreStrings {
 
   }
 
+  public static void toStringDemo() {
+
+    double d = 858.48;
+    String s = Double.toString(d);
+
+    int dot = s.indexOf('.');
+
+    System.out.printf("Original number: %.2f%n", d);
+
+    System.out.println(dot + " digits " +
+        "before decimal point.");
+    System.out.println((s.length() - dot - 1) +
+        " digits after decimal point.");
+
+  }
+
   public static void main() {
     // create string from char[]
     char[] helloArray = { 'h', 'e', 'l', 'l', 'o', '.' };
@@ -37,6 +53,7 @@ public class MoreStrings {
     // if this string is reversed, was->saw,
     // dot->tod!
     reverseIntoPalindrome();
+    toStringDemo();
 
   }
 }
