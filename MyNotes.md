@@ -13,15 +13,6 @@ gradle build
 
 ./gradlew bootRun
 
-# Add this to the settings in build.gradle
-dependencies {
-	...
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	...
-}
-
-
-
 ```
 
 
